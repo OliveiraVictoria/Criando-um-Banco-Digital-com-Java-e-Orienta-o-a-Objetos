@@ -1,16 +1,14 @@
-public class ContaCorrente extends Conta{
 
-    private static int SEQUENCIAL = 1;
+public class ContaCorrente extends Conta {
 
-    public ContaCorrente (){
-        super();
-        super.agencia = Conta.AGENCIA_PADRAO;
-        super.numero = SEQUENCIAL++;
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
 
     @Override
     public void imprimirExtrato() {
-        System.out.println("=====Extrato Conta Corrente=====");
-        super.imprimirInfoComum();
+        System.out.println("=== Extrato Conta Corrente ===");
+        super.imprimirInfosComuns();
     }
+
 }
